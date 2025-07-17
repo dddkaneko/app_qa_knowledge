@@ -1,0 +1,60 @@
+/* カスタムスタイル（Bootstrapの補完） */
+body {
+    background-color: #f8f9fa;
+}
+
+.qa-item {
+    border: 1px solid #dee2e6;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    background: white;
+    transition: box-shadow 0.2s ease;
+}
+
+.qa-item:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.qa-question {
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 12px;
+    font-size: 1.1em;
+}
+
+.qa-answer {
+    color: #6c757d;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.qa-meta {
+    font-size: 0.875em;
+    color: #6c757d;
+    border-top: 1px solid #e9ecef;
+    padding-top: 8px;
+}
+
+.qa-meta .badge {
+    margin-right: 8px;
+}
+
+/* アニメーション */
+.card {
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+/* ローディング表示 */
+.loading {
+    text-align: center;
+    padding: 40px;
+    color: #6c757d;
+}
+
+.loading .spinner-border {
+    margin-bottom: 16px;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QAシート管理アプリ</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ナビゲーションバー -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-question-circle-fill me-2"></i>
+                QAシート管理アプリ
+            </a>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <!-- CSVアップロード -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5 class="card-title mb-0">
+                    <i class="bi bi-upload me-2"></i>
+                    CSVファイルアップロード
+                </h5>
+            </div>
+            <div class="card-body">
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <input type="file" class="form-control" id="csvFile" accept=".csv">
+                    </div>
+                    <div class="col-md-4">
+                        <button class="btn btn-primary w-100" onclick="uploadCSV()">
+                            <i class="bi bi-cloud-upload me-2"></i>
+                            アップロード
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 検索 -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5 class="card-title mb-0">
+                    <i class="bi bi-search me-2"></i>
+                    QA検索
+                </h5>
+            </div>
+            <div class="card-body">
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" id="searchInput" placeholder="質問や回答を検索...">
+                    </div>
+                    <div class="col-md-4">
+                        <div class="btn-group w-100" role="group">
+                            <button class="btn btn-outline-primary" onclick="searchQA()">
+                                <i class="bi bi-search me-1"></i>
+                                検索
+                            </button>
+                            <button class="btn btn-outline-secondary" onclick="loadAllQA()">
+                                <i class="bi bi-list me-1"></i>
+                                全て表示
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- QA一覧 -->
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="card-title mb-0">
+                    <i class="bi bi-list-ul me-2"></i>
+                    QA一覧
+                </h5>
+                <button class="btn btn-outline-danger btn-sm" onclick="deleteAllQA()" id="deleteAllBtn" style="display: none;">
+                    <i class="bi bi-trash me-1"></i>
+                    全て削除
+                </button>
+            </div>
+            <div class="card-body">
+                <div id="qaContainer">
+                    <div class="text-center text-muted">
+                        <i class="bi bi-inbox display-4"></i>
+                        <p class="mt-2">データがありません</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
