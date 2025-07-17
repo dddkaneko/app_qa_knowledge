@@ -1,0 +1,6 @@
+question,answer,category,tags
+"JavaScriptとは何ですか？","JavaScriptはWebページに動的な機能を追加するプログラミング言語です","プログラミング","JavaScript,Web"
+"HTMLの基本構造は？","HTML文書は<html><head><body>の基本構造を持ちます","マークアップ","HTML,基礎"
+"CSSでスタイルを適用する方法は？","セレクタを使ってHTML要素にスタイルを適用します","スタイリング","CSS,デザイン"
+"Node.jsとは何ですか？","Node.jsはサーバーサイドでJavaScriptを実行するためのランタイム環境です","バックエンド","Node.js,サーバー"
+"SQLiteの特徴は？","SQLiteは軽量で組み込み可能なリレーショナルデータベースです","データベース","SQLite,DB"
